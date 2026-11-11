@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.0.9</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.example</groupId>
+    <artifactId>helloboot</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>helloboot</name>
+
+    <properties>
+        <java.version>21</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc</artifactId>
+        </dependency>
+
+        <!-- 依赖 = 能力。 你在 classpath 里放进某样东西，Spring Boot 启动时会「看见」它，然后自动把对应的功能接上、配置好。
+        仅仅只是添加了这个依赖, 访问localhost8080/actuator/health 就能看到服务的健康状态.
+        官方文档把 starter 描述得特别直白：starter 本质上是个空 jar，它的唯一作用就是帮你把一堆配套依赖拉进来。
+        你加了 spring-boot-starter-actuator，它就把 spring-boot-actuator 这个装满「监控端点」实现的大模块拉进了你的 classpath；
+        Spring Boot 启动时发现「咦，监控的类在」，就自动把 /actuator/health 给你装好了。 -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
