@@ -1,0 +1,7 @@
+# 上一轮 /actuator/beans 是 404，这一轮能打开了。这中间你没有动任何 Java 代码，只在一个叫 application.yaml 的文件里加了下面这一个配置
+# 配置 = 开关。 application.properties 是应用的「设置面板」，里面是一堆键值对开关。改开关的值，应用行为就变，不需要改代码、不需要重新编译。
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # 注意有双引号, * 表示全部端点endpoint都放开了. Spring Boot 出于安全考虑，默认只把 health 这一个端点对外开放（其他端点可能暴露敏感信息）
