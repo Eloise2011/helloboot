@@ -1,5 +1,6 @@
 package com.example.helloboot;
 
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
 /**
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
  * @description
  */
 @Service
+@Order(2)
 public class FormalGreetingProvider implements GreetingProvider {
 
     @Override

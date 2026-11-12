@@ -1,6 +1,7 @@
 package com.example.helloboot;
 
 import org.springframework.context.annotation.Primary;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
 /**
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @Primary
+@Order(1)
 public class SimpleGreetingProvider implements GreetingProvider {
 
     @Override
