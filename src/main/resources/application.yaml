@@ -5,3 +5,9 @@ management:
     web:
       exposure:
         include: "*" # 注意有双引号, * 表示全部端点endpoint都放开了. Spring Boot 出于安全考虑，默认只把 health 这一个端点对外开放（其他端点可能暴露敏感信息）
+app:
+  feature:
+    enabled: true # 这个开关是我自己定义的，Spring Boot 不认识它。它的作用是告诉应用，我想启用某个功能。你可以在代码里通过 @Value("${app.feature.enable}") 注入这个值，或者通过 @ConfigurationProperties 注入整个 app.feature 对象。
+  greeting:
+    enabled: true
+    message: 你好, 自动配置 !
