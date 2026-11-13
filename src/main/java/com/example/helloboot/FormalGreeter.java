@@ -4,8 +4,9 @@ import jakarta.annotation.Priority;
 import org.springframework.stereotype.Service;
 
 /**
+ * The formal greeting implementation used by {@link HelloControllerV5}.
+ *
  * @author Joshua.H.Brooks
- * @description
  */
 @Service
 @Priority(2)

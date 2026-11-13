@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
+ * Exposes all greeting providers in their configured order at {@code /v4}.
+ *
  * @author Joshua.H.Brooks
- * @description
  */
 @RestController
 public class HelloControllerV4 {

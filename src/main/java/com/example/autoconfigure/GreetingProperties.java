@@ -4,10 +4,16 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
+ * Holds settings under the {@code app.greeting} prefix.
+ *
+ * <p>{@code @ConfigurationProperties} binds matching values from {@code application.yaml} onto
+ * these fields; for example, {@code app.greeting.message} sets {@link #message}. Change that YAML
+ * value and request {@code /auto-config/greeting} to see the configured greeting change. Without
+ * this annotation, the YAML value is not bound and the default remains.
+ *
  * @author Joshua.H.Brooks
- * @description
  */
-@ConfigurationProperties(prefix = "app.greeting") // 将来 yaml 里写 app.greeting.message 就会灌进 message 字段。
+@ConfigurationProperties(prefix = "app.greeting")
 public class GreetingProperties {
 
     private String message = "Hello Auto-Configuration!";

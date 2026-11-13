@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
+ * Exposes one selected greeter at {@code /v5} and all greeters at {@code /v5/list}.
+ *
  * @author Joshua.H.Brooks
- * @description
  */
 @RestController
 public class HelloControllerV5 {

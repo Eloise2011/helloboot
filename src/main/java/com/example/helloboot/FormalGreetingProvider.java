@@ -4,8 +4,9 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
 /**
+ * The formal greeting provider, ordered after {@link SimpleGreetingProvider} in collections.
+ *
  * @author Joshua.H.Brooks
- * @description
  */
 @Service
 @Order(2)

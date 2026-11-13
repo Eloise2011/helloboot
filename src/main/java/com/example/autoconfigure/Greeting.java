@@ -1,8 +1,9 @@
 package com.example.autoconfigure;
 
 /**
+ * A greeting message produced by auto-configuration.
+ *
  * @author Joshua.H.Brooks
- * @description
  */
 public class Greeting {
 
