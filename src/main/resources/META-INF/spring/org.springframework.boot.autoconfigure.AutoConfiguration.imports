@@ -1,1 +1,3 @@
 com.example.autoconfigure.GreetingAutoConfiguration
+com.example.autoconfigure.PresentLibAutoConfiguration
+com.example.autoconfigure.AbsentLibAutoConfiguration
